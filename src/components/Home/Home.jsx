@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+import { Link } from 'react-scroll'
 import man from "../../assets/man.png"
 import { TypingEffect } from "react-typing-effect"
 import { Typewriter } from 'react-simple-typewriter'
@@ -9,14 +10,7 @@ import gsap from 'gsap'
 import { Download } from "lucide-react";
 
 function Home() {
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/CV.pdf";          // EXACT file name
-    link.download = "CV.pdf";       // or any name you want
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   useGSAP(() => {
     let tl1 = gsap.timeline()
@@ -58,7 +52,8 @@ function Home() {
               delaySpeed={1000}
             />
           </div>
-          <button onClick={handleDownloadCV} ><Download size={18} /> DOWNLOAD CV</button>
+          {/* <button>Hire Me</button> */}
+          <Link className='button' to="contact" smooth={true} duration={500} activeClass='active' spy={true}><button>Hire me</button></Link>
         </div>
       </div>
       <div className="righthome">

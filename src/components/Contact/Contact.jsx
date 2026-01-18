@@ -3,10 +3,20 @@ import con from '../../assets/contact.png'
 import './Contact.css'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { Download } from 'lucide-react'
 import { ScrollTrigger } from 'gsap/all'
 gsap.registerPlugin(ScrollTrigger)
 
 function Contact() {
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/CV.pdf";          // EXACT file name
+    link.download = "CV.pdf";       // or any name you want
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useGSAP(() => {
     gsap.from(".leftcontact img", {
@@ -50,6 +60,7 @@ function Contact() {
             <input name='username' type='email' placeholder='Your Email/Company Email' />
             <textarea name='message' id='textarea' placeholder='Message me' />
             <input type="submit" id="btn" value="Submit" />
+            <button type='button' className='download' onClick={handleDownloadCV}><Download size={18} /> CV</button>
           </form>
         </div>
       </div>

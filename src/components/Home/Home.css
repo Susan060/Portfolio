@@ -1,11 +1,11 @@
-#home{
+#home {
     width: 100%;
-    height:100%;
+    height: 100%;
     display: flex;
     overflow: hidden;
 }
 
-.lefthome{
+.lefthome {
     width: 50%;
     height: 100vh;
     display: flex;
@@ -13,64 +13,77 @@
     justify-content: center;
     color: white;
 }
-.righthome{
+
+.righthome {
     width: 50%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.righthome img{
+
+.righthome img {
     width: 60%;
-    filter: drop-shadow(2px 2px 20px rgb(116,201,225));
+    filter: drop-shadow(2px 2px 20px rgb(116, 201, 225));
     border-radius: 70px;
 
 }
-.homedetails{
+
+.homedetails {
     font-size: 2vmax;
 }
-.line1{
-    font-size:0.8em;
+
+.line1 {
+    font-size: 0.8em;
 }
-.line2{
+
+.line2 {
     font-size: 2.5em;
-    background: linear-gradient(to right,rgb(66,180,205),white);
+    background: linear-gradient(to right, rgb(66, 180, 205), white);
     background-clip: text;
-    color:transparent
+    color: transparent
 }
-.line3{
+
+.line3 {
     font-size: 1em;
 }
-.homedetails button{
-    padding: 10px 30px ;
-    background-color: rgb(66, 180,205);
-    color:black;
-    border:2px solid  rgb(66, 180,205);
+
+.homedetails button {
+    padding: 10px 30px;
+    background-color: rgb(66, 180, 205);
+    color: black;
+    border: 2px solid rgb(66, 180, 205);
     margin-top: 30px;
     border-radius: 20px;
     font-size: 19px;
 }
-.homedetails button:hover{
+
+.homedetails button:hover {
     background-color: transparent;
-    color:rgb(66, 180,205); 
+    color: rgb(66, 180, 205);
     transition: all 0.2s;
     cursor: pointer;
 }
 
-@media (max-width:750px){
-    #home{
+
+
+@media (max-width:750px) {
+    #home {
         flex-direction: column-reverse;
     }
-    .lefthome{
+
+    .lefthome {
         width: 100%;
         height: 50vh;
     }
-    .righthome{
+
+    .righthome {
         width: 100%;
         height: 50vh;
         align-items: end;
     }
-    .righthome img{
+
+    .righthome img {
         margin-top: 50px;
     }
 }

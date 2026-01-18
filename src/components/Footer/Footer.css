@@ -1,0 +1,49 @@
+footer{
+background-color: rgb(17, 20, 23);
+color: white;
+}
+
+.tag {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;   
+}
+.details{
+    display: flex;
+    gap:60px;
+    justify-content: center;
+    padding-bottom: 20px;
+    color:white;
+}
+.details .face:hover{
+    color: rgb(105, 208, 215);
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+    
+}
+.details .insta:hover{
+    color: rgb(105, 208, 215);
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+}
+.details .git:hover{
+    color: rgb(105, 208, 215);
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+}
+.details .link:hover{
+    color: rgb(105, 208, 215);
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+}
+
+@media (max-width:750px){
+    .details{
+        gap:30px
+    }
+    .tag {
+        font-size: 12px;
+
+    }
+}
