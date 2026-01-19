@@ -8,6 +8,7 @@ color: white;
     padding-bottom: 10px;
     display: flex;
     justify-content: center;   
+    margin-bottom: 6px;
 }
 .details{
     display: flex;
@@ -15,6 +16,7 @@ color: white;
     justify-content: center;
     padding-bottom: 20px;
     color:white;
+    margin-top: 10px;
 }
 .details .face:hover{
     color: rgb(105, 208, 215);
