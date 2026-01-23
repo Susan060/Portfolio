@@ -1,11 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reset + global font */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    background-color: rgb(17, 20, 23);
+
+/* Base body styling */
+body {
+  background-color: rgb(17, 20, 23);
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* Animated coding grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 170, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridScroll 22s linear infinite;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Soft neon glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 170, 0.07),
+    transparent 65%
+  );
+  animation: glowPulse 6s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes gridScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.35;
+  }
 }
