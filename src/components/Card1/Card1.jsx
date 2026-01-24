@@ -1,22 +1,21 @@
-// import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./card1.module.css";
+import React from "react";
+import "./card1.css";
 
 function Card({ image, title, description, tech, onClick }) {
   return (
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
+    <div className="card1">
+      <div className="card1-imageWrapper">
         <img src={image} alt={title} />
       </div>
 
       {/* Desktop-only content */}
-      <div className={styles.desktopContent}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+      <div className="card1-desktopContent">
+        <h3 className="card1-title">{title}</h3>
+        <p className="card1-description">{description}</p>
 
-        <div className={styles.techStack}>
+        <div className="card1-techStack">
           {tech.map((item, index) => (
-            <span key={index} className={styles.tech}>
+            <span key={index} className="card1-tech">
               {item}
             </span>
           ))}
@@ -24,8 +23,8 @@ function Card({ image, title, description, tech, onClick }) {
       </div>
 
       {/* Mobile-only button */}
-            <button 
-        className={styles.mobileButton}
+      <button 
+        className="card1-mobileButton"
         onClick={(e) => {
           e.stopPropagation(); // Prevent triggering parent click
           if (onClick) onClick(e);
