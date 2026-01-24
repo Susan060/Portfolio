@@ -1,7 +1,8 @@
 // import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./card1.module.css";
 
-function Card({ image, title, description, tech, link }) {
+function Card({ image, title, description, tech, onClick }) {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -23,14 +24,16 @@ function Card({ image, title, description, tech, link }) {
       </div>
 
       {/* Mobile-only button */}
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
+            <button 
         className={styles.mobileButton}
+        onClick={(e) => {
+          e.stopPropagation(); // Prevent triggering parent click
+          if (onClick) onClick(e);
+        }}
+        aria-label={`View ${title} details`}
       >
-        Visit Website
-      </a>
+        View Details
+      </button>
     </div>
   );
 }
