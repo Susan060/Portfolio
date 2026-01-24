@@ -31,7 +31,7 @@ function Card({ image, title, description, tech, onClick }) {
         }}
         aria-label={`View ${title} details`}
       >
-        View Details
+        Visit Website
       </button>
     </div>
   );
