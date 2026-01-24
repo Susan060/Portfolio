@@ -1,0 +1,132 @@
+.card {
+  width: clamp(260px, 90vw, 320px);
+  height: 460px;
+  background: linear-gradient(180deg, #1b1f24, #15181c);
+  border-radius: 18px;
+  padding: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 0 25px rgba(82, 205, 207, 0.35),
+      0 30px 60px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Image */
+.imageWrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Desktop content wrapper */
+.desktopContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #7ad9e6, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Description */
+.description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin-bottom: 16px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tech stack */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tech {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(122, 217, 230, 0.3);
+  color: #e8feff;
+  backdrop-filter: blur(6px);
+}
+
+/* Mobile button (hidden on desktop) */
+.mobileButton {
+  display: none;
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #7ad9e6, #52cdcf);
+  color: #0f1419;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(82, 205, 207, 0.4);
+}
+
+/* 📱 Mobile layout */
+@media (max-width: 480px) {
+  .card {
+    height: 320px;
+    padding: 12px;
+  }
+
+  .imageWrapper {
+    height: 220px;
+    margin-bottom: 12px;
+  }
+
+  /* Hide desktop content */
+  .desktopContent {
+    display: none;
+  }
+
+  /* Show mobile button */
+  .mobileButton {
+    display: block;
+  }
+}
+
+/* Extra safety for touch devices */
+@media (hover: none) {
+  .card:hover {
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  }
+}

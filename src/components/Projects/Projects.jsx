@@ -1,5 +1,6 @@
 import React from 'react'
-import Card from '../Card/Card'
+
+import Card from '../Card1/Card1'
 import './Projects.css'
 import grocery from '../../assets/grocery.png'
 import bicycle from '../../assets/bicycle.png'
@@ -46,31 +47,152 @@ function Projects() {
       })
   })
   return (
-    <div id='projects'>
-      <h1 id='para'>
+    // <div id='projects'>
+    //   <h1 id='para'>
+    //     1+ YEARS EXPERIENCE IN PROJECTS
+    //   </h1>
+    //   <div className="slider">
+    //     <Link
+    //       to="https://grocerygo-two.vercel.app"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       className="card-link"
+    //     >
+    //       <Card
+    //         image={grocery}
+    //         title="GroceryGo"
+    //         description="GroceryGo is a web-based grocery management and ordering platform that enables users to browse products, manage carts, and place orders efficiently."
+    //         tech={["NextJS", "MongoDB Atlas", "Tailwind CSS", "Redux", "SocketServer"]}
+    //       />
+    //     </Link>
+    //     <Link
+    //       to="https://blood-bridge-link.vercel.app/"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       className="card-link"
+    //     >
+    //       <Card
+    //         image={blood}
+    //         title="Blood_Bridge"
+    //         description="BloodBridge is a full-stack blood donation management platform that allows users to register, participate in donation events, and request emergency blood."
+    //         tech={["ReactJS", "MongoDB Atlas", "Express", "Node JS", "Bootstrap"]}
+    //       />
+    //     </Link>
+
+    //     <Link
+    //       to="https://ridegear.free.nf/?i=1"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       className="card-link"
+    //     >        <Card
+    //         image={bicycle}
+    //         title="RideGear"
+    //         description="Bicycle RideGear is an e-commerce platform for cycling enthusiasts that offers gear, accessories, and apparel with seamless online ordering."
+    //         tech={["WordPress", "WooCommerce", "StarterTemplates", "YoastSEO", "SQL"]}
+    //       /></Link>
+    //     <Link
+    //       to="https://ridegear.free.nf/?i=1"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       className="card-link"
+    //     >        <Card
+    //         image={bicycle}
+    //         title="RideGear"
+    //         description="Bicycle RideGear is an e-commerce platform for cycling enthusiasts that offers gear, accessories, and apparel with seamless online ordering."
+    //         tech={["WordPress", "WooCommerce", "StarterTemplates", "YoastSEO", "SQL"]}
+    //       /></Link>        <Link
+    //         to="https://ridegear.free.nf/?i=1"
+    //         target="_blank"
+    //         rel="noopener noreferrer"
+    //         className="card-link"
+    //       >        <Card
+    //         image={bicycle}
+    //         title="RideGear"
+    //         description="Bicycle RideGear is an e-commerce platform for cycling enthusiasts that offers gear, accessories, and apparel with seamless online ordering."
+    //         tech={["WordPress", "WooCommerce", "StarterTemplates", "YoastSEO", "SQL"]}
+    //       /></Link>
+
+    //     <Link
+    //       to="https://news-share-link.vercel.app/"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //       className="card-link"
+    //     ><Card
+    //         image={news}
+    //         title="NewShare"
+    //         description="NewShare is a web-based news aggregation and sharing platform that lets users access, curate, and share news from multiple sources in real time."
+    //         tech={["React JS", "Bootstrap", "API"]}
+    //       /></Link>
+    //   </div>
+    // </div>
+    <div id="projects">
+      <h1 id="para">
         1+ YEARS EXPERIENCE IN PROJECTS
       </h1>
-      <div className="slider">
-        <Link
-          to="https://grocerygo-two.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card-link"
-        >
-          <Card title="Grocery Delivery" image={grocery} description="A full-stack grocery delivery app built with React and Node.js." />
-        </Link>
-        <Link to="https://blood-bridge-link.vercel.app/" target="_blank" className="card-link">
-          <Card title="Blood Donation Platform" image={blood} description="A full-stack grocery delivery app built with React and Node.js." />
-        </Link>
-        <Link to="https://ridegear.free.nf/?i=1" target="_blank" className="card-link">
-          <Card title="Bicycle Ecommerce website" image={bicycle}  description="A full-stack grocery delivery app built with React and Node.js."/>
-        </Link>
-        <Link to="https://news-share-link.vercel.app/" target="_blank" className="card-link">
-          <Card title="News Share" image={news} description='' />
-        </Link>
 
+      <div className="slider">
+        {/* 👇 NEW WRAPPER — required for scrolling logic */}
+        <div className="sliderTrack">
+
+          <Link
+            to="https://grocerygo-two.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+          >
+            <Card
+              image={grocery}
+              title="GroceryGo"
+              description="GroceryGo is a web-based grocery management and ordering platform that enables users to browse products, manage carts, and place orders efficiently."
+              tech={["NextJS", "MongoDB Atlas", "Tailwind CSS", "Redux", "SocketServer"]}
+            />
+          </Link>
+
+          <Link
+            to="https://blood-bridge-link.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+          >
+            <Card
+              image={blood}
+              title="Blood_Bridge"
+              description="BloodBridge is a full-stack blood donation management platform that allows users to register, participate in donation events, and request emergency blood."
+              tech={["ReactJS", "MongoDB Atlas", "Express", "Node JS", "Bootstrap"]}
+            />
+          </Link>
+
+          <Link
+            to="https://ridegear.free.nf/?i=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+          >
+            <Card
+              image={bicycle}
+              title="RideGear"
+              description="Bicycle RideGear is an e-commerce platform for cycling enthusiasts that offers gear, accessories, and apparel with seamless online ordering."
+              tech={["WordPress", "WooCommerce", "StarterTemplates", "YoastSEO", "SQL"]}
+            />
+          </Link>
+          <Link
+            to="https://news-share-link.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+          >
+            <Card
+              image={news}
+              title="NewShare"
+              description="NewShare is a web-based news aggregation and sharing platform that lets users access, curate, and share news from multiple sources in real time."
+              tech={["React JS", "Bootstrap", "API"]}
+            />
+          </Link>
+
+        </div>
       </div>
     </div>
+
   )
 }
 

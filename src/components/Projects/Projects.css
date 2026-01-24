@@ -1,4 +1,4 @@
-#projects{
+/* #projects{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -9,7 +9,7 @@
 }
 .slider{
     width: 90%;
-    height: 300px;
+    height: 500px;
     display: flex;
     align-items: center;
     overflow-y: hidden;
@@ -27,5 +27,106 @@
     text-align: center;
 }
 .card-link {
-  display: contents; /* 🔥 KEY LINE */
+  display: contents; 
+} */
+/* ===== PROJECT SECTION ===== */
+#projects {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ===== TITLE ===== */
+#para {
+    font-size: 4vmax;
+    background: linear-gradient(to right, rgb(66, 180, 205), white);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+/* ===== SLIDER (SCROLL CONTAINER) ===== */
+.slider {
+    width: 90%;
+    overflow-x: auto;
+    /* ✅ horizontal scroll */
+    overflow-y: hidden;
+    padding: 20px;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE & Edge */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+/* ===== SLIDER TRACK ===== */
+.sliderTrack {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    justify-content: center;
+    margin: 0 auto;
+    /* 🔑 keeps card size fixed */
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    flex-shrink: 0;
+    /* 🔑 prevents shrinking */
+
+    background: linear-gradient(180deg, #1b1f24, #15181c);
+    border-radius: 18px;
+    padding: 16px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 25px rgba(82, 205, 207, 0.35),
+        0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+    .slider {
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* ✅ vertical scroll */
+
+        /* scrollbar hidden */
+        scrollbar-width: none;
+    }
+
+    .sliderTrack {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 360px;
+    }
+}
+
+/* ===== LINK FIX ===== */
+.card-link {
+    display: contents;
 }
