@@ -6,7 +6,7 @@ import grocery from '../../assets/grocery.png'
 import bicycle from '../../assets/bicycle.png'
 import blood from '../../assets/blood.png'
 import news from '../../assets/NewShare.png'
-import tech from '../../assets/TechHive.png'
+import tech from '../../assets/tech.png'
 import fw from "../../assets/fw.png"
 import { useGSAP } from '@gsap/react'
 import { Link } from 'react-router-dom'
