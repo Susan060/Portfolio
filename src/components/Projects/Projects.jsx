@@ -6,6 +6,7 @@ import grocery from '../../assets/grocery.png'
 import bicycle from '../../assets/bicycle.png'
 import blood from '../../assets/blood.png'
 import news from '../../assets/NewShare.png'
+import tech from '../../assets/TechHive.png'
 import fw from "../../assets/fw.png"
 import { useGSAP } from '@gsap/react'
 import { Link } from 'react-router-dom'
@@ -64,6 +65,19 @@ function Projects() {
               description="GroceryGo is a web-based grocery management and ordering platform that enables users to browse products, manage carts, and place orders efficiently."
               tech={["NextJS", "MongoDB Atlas", "Tailwind CSS", "Redux", "SocketServer"]}
               onClick={() => window.open("https://grocerygo-two.vercel.app/", "_blank")}
+            />
+          </div>
+          <div
+            className="card-link"
+            onClick={() => window.open("https://tech-hive-six.vercel.app/", "_blank")}
+            style={{ cursor: 'pointer' }}
+          >
+            <Card
+              image={tech}
+              title="Tech Hive"
+              description="TechHive is a modern e-commerce web application that allows users to browse products, add items to the cart, and place orders with a Cash on Delivery (COD) option."
+              tech={["NextJS", "MongoDB Atlas", "Tailwind CSS", "Redux", "SocketServer"]}
+              onClick={() => window.open("https://tech-hive-six.vercel.app/", "_blank")}
             />
           </div>
           <div
